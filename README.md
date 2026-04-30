@@ -41,7 +41,7 @@ Here are some ideas to get you started:
 ### 📊 הסטטיסטיקה שלי ב-GitHub
 
 <p align="center">
-  <img height="180" src="https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&theme=radical&include_all_commits=true&count_private=true" />
+  <img height="180" src="https://github-readme-stats.vercel.app/api?username=shhgabay&show_icons=true&theme=radical&include_all_commits=true&count_private=true" />
   <img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=shhgabay&layout=compact&theme=radical&langs_count=6" />
 </p>
 
@@ -50,8 +50,7 @@ Here are some ideas to get you started:
 
 #### 💻 פיתוח וחומרה
 * [ESP32 Resources](https://www.espressif.com/en/products/socs/esp32) - כל מה שצריך לעבודה עם ה-ESP32.
-* [GitHub Skills](https://skills.github.com/) - מקום מצוין ללמוד טכניקות גיט מתקדמות.
-* [Arduino Reference](https://www.arduino.cc/reference/en/) - התנ"ך של עולם הארדואינו.
+* [GitHub Skills](https://skills.github.com/) - מקום מצוין ללמוד טכניקו
 
 #### 🎨 עיצוב ונכסים דיגיטליים
 * [Flaticon](https://www.flaticon.com/) - המקור שלי לאייקונים וסמלים לפרויקטים.

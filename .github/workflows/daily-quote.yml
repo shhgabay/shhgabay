@@ -2,30 +2,41 @@ name: Update Daily Quote
 
 on:
   schedule:
-    - cron: '0 0 * * *' # רץ בכל יום בחצות
-  workflow_dispatch: # מאפשר לך להריץ את זה גם ידנית
+    - cron: '0 0 * * *'
+  workflow_dispatch:
 
 jobs:
   update-quote:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - uses: actions/checkout@v3
-      - name: Get Quote
+      - uses: actions/checkout@v4
+      
+      - name: Generate Random Quote
         run: |
-          QUOTE=$(curl -s https://api.quotable.io/random?tags=technology)
-          TEXT=$(echo $QUOTE | jq -r '.content')
-          AUTHOR=$(echo $QUOTE | jq -r '.author')
+          # רשימת ציטוטים קבועה ויציבה
+          QUOTES=(
+            "\"The only way to do great work is to love what you do.\" - Steve Jobs"
+            "\"First, solve the problem. Then, write the code.\" - John Johnson"
+            "\"Code is like humor. When you have to explain it, it’s bad.\" - Cory House"
+            "\"Hardware is where the software goes to die.\" - Unknown"
+            "\"Talk is cheap. Show me the code.\" - Linus Torvalds"
+          )
+          SELECTED_QUOTE=${QUOTES[$RANDOM % ${#QUOTES[@]}]}
           echo "### 💡 ציטוט טכנולוגי יומי" > quote.md
-          echo "> $TEXT - **$AUTHOR**" >> quote.md
+          echo "> $SELECTED_QUOTE" >> quote.md
       
       - name: Update README
         run: |
-          # כאן אנחנו משלבים את הציטוט לתוך ה-README
+          # קורא את ה-README המקורי עד לסימון (אם קיים) או פשוט דורס את הסוף
+          sed -i '/### 💡 ציטוט טכנולוגי יומי/,$d' README.md
           cat quote.md >> README.md
           
       - name: Commit changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git commit -am "Update daily quote"
+          git add README.md
+          git commit -m "Update daily quote [skip ci]" || echo "No changes to commit"
           git push

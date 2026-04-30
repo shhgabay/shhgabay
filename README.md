@@ -1,3 +1,5 @@
+<div align="center">
+
 ## Hi there 👋
 
 
@@ -41,20 +43,20 @@ Here are some ideas to get you started:
 ### 📊 הסטטיסטיקה שלי ב-GitHub
 
 <p align="center">
-  <img height="180" src="https://github-readme-stats.vercel.app/api?username=shhgabay&show_icons=true&theme=radical&include_all_commits=true&count_private=true" />
-  <img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=shhgabay&layout=compact&theme=radical&langs_count=6" />
+  <img height="180" src="                                                            &show_icons=true&theme=radical&include_all_commits=true&count_private=true" />
+  <img height="180" src="                                                                       &layout=compact&theme=radical&langs_count=6" />
 </p>
 
 
 ### 🚀 המשאבים המועדפים עלי (Awesome List)
 
 #### 💻 פיתוח וחומרה
-* [ESP32 Resources](https://www.espressif.com/en/products/socs/esp32) - כל מה שצריך לעבודה עם ה-ESP32.
-* [GitHub Skills](https://skills.github.com/) - מקום מצוין ללמוד טכניקו
+* [ESP32 Resources](                                                ) - כל מה שצריך לעבודה עם ה-ESP32.
+* [GitHub Skills](                          ) - מקום מצוין ללמוד טכניקו
 
 #### 🎨 עיצוב ונכסים דיגיטליים
 * [Flaticon](https://www.flaticon.com/) - המקור שלי לאייקונים וסמלים לפרויקטים.
-* [Shields.io](https://shields.io/) - הכלי שבעזרתו יצרנו את ה-Badges למעלה.
+* [Shields.io](                   ) - הכלי שבעזרתו יצרנו את ה-Badges למעלה.
 
 #### 🌍 למידה והתפתחות
 * [FreeCodeCamp](https://www.freecodecamp.org/) - פלטפורמה מעולה לתרגול קוד.
@@ -68,3 +70,8 @@ Here are some ideas to get you started:
 
 
 ![snake svg](https://raw.githubusercontent.com/shhgabay/shhgabay/output/github-snake-dark.svg)
+
+
+
+
+</div>

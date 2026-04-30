@@ -12,57 +12,87 @@
     <style>
         :root {
             --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --accent-color: #58a6ff;
+            --border-color: #30363d;
         }
+        
         body {
             background-color: var(--bg-color);
             margin: 0;
-            padding: 40px 20px;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* הגדרות קנבס החלקיקים - הרקע זז */
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0; /* שומר אותו מאחור */
+        }
+
+        /* מיכל התוכן הראשי */
+        #main-container {
+            position: relative;
+            z-index: 1; /* מציב את התוכן מעל הרקע */
             display: flex;
             flex-direction: column;
             align-items: center;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            padding: 60px 20px;
         }
+
         /* כותרת אפקט ההקלדה */
         #typing-title {
-            color: #58a6ff;
-            font-size: 2rem;
-            margin-bottom: 30px;
+            color: var(--accent-color);
+            font-size: 2.5rem;
+            margin-bottom: 40px;
             min-height: 1.2em;
             text-align: center;
-            font-weight: 600;
+            font-weight: 700;
+            text-shadow: 0 0 10px rgba(88, 166, 255, 0.5);
         }
-        /* מיכל התוכן הראשי */
+
+        /* כרטיס ה-Markdown */
         .markdown-body {
             box-sizing: border-box;
             min-width: 200px;
             max-width: 980px;
             width: 100%;
             padding: 45px;
-            background-color: #161b22;
-            border: 1px solid #30363d;
+            background-color: rgba(22, 27, 34, 0.9); /* שקוף מעט כדי לראות את הרקע */
+            border: 1px solid var(--border-color);
             border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.7);
+            backdrop-filter: blur(5px); /* אפקט טשטוש מתחת לכרטיס */
         }
+
         /* התאמה לניידים */
         @media (max-width: 767px) {
-            .markdown-body {
-                padding: 15px;
-            }
-            #typing-title {
-                font-size: 1.5rem;
-            }
+            .markdown-body { padding: 20px; }
+            #typing-title { font-size: 1.8rem; margin-bottom: 25px; }
+            #main-container { padding: 30px 10px; }
         }
     </style>
 </head>
 <body>
 
-    <h1 id="typing-title"></h1>
+    <div id="particles-js"></div>
 
-    <article id="content" class="markdown-body">
-        <p style="text-align: center;">טוען את הפרופיל הדינמי...</p>
-    </article>
+    <div id="main-container">
+        <h1 id="typing-title"></h1>
+
+        <article id="content" class="markdown-body">
+            <p style="text-align: center;">טוען את הפרופיל הדינמי...</p>
+        </article>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     
     <script>
         // 1. אפקט הקלדה
@@ -72,18 +102,18 @@
             if (index < titleText.length) {
                 document.getElementById("typing-title").innerHTML += titleText.charAt(index);
                 index++;
-                setTimeout(typeWriter, 70);
+                setTimeout(typeWriter, 60);
             }
         }
 
         // 2. טעינת ה-README והצגתו
         async function loadProfile() {
             try {
-                // מוסיפים Timestamp כדי למנוע Cache ולוודא שהציטוט היומי מתעדכן
+                // מונע Cache בעזרת Timestamp
                 const response = await fetch('README.md?t=' + new Date().getTime());
                 const markdown = await response.text();
                 document.getElementById('content').innerHTML = marked.parse(markdown);
-                // מתחילים את אפקט ההקלדה רק אחרי שהתוכן נטען
+                // מתחילים את אפקט ההקלדה אחרי הטעינה
                 typeWriter();
             } catch (err) {
                 document.getElementById('content').innerHTML = "שגיאה בטעינת הפרופיל.";
@@ -91,6 +121,26 @@
             }
         }
 
+        // 3. הגדרות אפקט החלקיקים (Particles)
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: "#58a6ff" }, /* צבע הנקודות - כחול גיטהאב */
+                shape: { type: "circle" },
+                opacity: { value: 0.5, random: false },
+                size: { value: 3, random: true },
+                line_linked: { enable: true, distance: 150, color: "#58a6ff", opacity: 0.4, width: 1 },
+                move: { enable: true, speed: 2, direction: "none", random: false, straight: false, out_mode: "out", bounce: false }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: { onhover: { enable: true, mode: "grab" }, onclick: { enable: true, mode: "push" }, resize: true },
+                modes: { grab: { distance: 140, line_linked: { opacity: 1 } }, push: { particles_nb: 4 } }
+            },
+            retina_detect: true
+        });
+
+        // הפעלת הטעינה
         loadProfile();
     </script>
 </body>

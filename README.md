@@ -27,6 +27,9 @@
 ![Notion](https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white)
 
 
+[![trophies](https://github-profile-trophy.vercel.app/?username=shhgabay&theme=radical&column=4)](https://github.com/ryo-ma/github-profile-trophy)
+
+
 ### 📊 הסטטיסטיקה שלי ב-GitHub
 
 <p align="center">

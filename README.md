@@ -65,3 +65,7 @@ Here are some ideas to get you started:
 ---
 ### 💡 ציטוט טכנולוגי יומי
 > "Talk is cheap. Show me the code." - Linus Torvalds
+
+
+
+![snake svg](https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/output/github-snake-dark.svg)

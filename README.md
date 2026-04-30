@@ -1,23 +1,10 @@
 <div align="center">
 
-## Hi there 👋
-
-
-<!--
-**shhgabay/shhgabay** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
 -->
 # שלום, אני שחר 👋
+
+![Progress Bar](https://year-in-progress.vercel.app/6/binary)
+
 
 ### 👨‍💻 קצת עלי
 אני איש מחשבים וטכנולוגיה, חובב פיתוח חומרה ותוכנה, ותמיד מחפש ללמוד דברים חדשים.

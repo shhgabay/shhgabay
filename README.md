@@ -68,4 +68,4 @@ Here are some ideas to get you started:
 
 
 
-![snake svg](https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/output/github-snake-dark.svg)
+![snake svg](https://raw.githubusercontent.com/shhgabay/shhgabay/output/github-snake-dark.svg)

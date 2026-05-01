@@ -55,13 +55,4 @@
 
 ---
 ### 💡 ציטוט טכנולוגי יומי
-> "Talk is cheap. Show me the code." - Linus Torvalds
-
-
-
-![snake svg](https://raw.githubusercontent.com/shhgabay/shhgabay/output/github-snake-dark.svg)
-
-
-
-
-</div>
+> "Code is like humor. When you have to explain it, it’s bad." - Cory House

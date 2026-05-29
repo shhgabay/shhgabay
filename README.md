@@ -55,4 +55,4 @@
 
 ---
 ### 💡 ציטוט טכנולוגי יומי
-> "The only way to do great work is to love what you do." - Steve Jobs
+> "Hardware is where the software goes to die." - Unknown

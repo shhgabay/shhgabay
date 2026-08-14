@@ -55,4 +55,4 @@
 
 ---
 ### 💡 ציטוט טכנולוגי יומי
-> "First, solve the problem. Then, write the code." - John Johnson
+> "Hardware is where the software goes to die." - Unknown

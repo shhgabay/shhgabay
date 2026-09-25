@@ -55,4 +55,4 @@
 
 ---
 ### 💡 ציטוט טכנולוגי יומי
-> "Talk is cheap. Show me the code." - Linus Torvalds
+> "Hardware is where the software goes to die." - Unknown

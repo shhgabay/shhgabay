@@ -55,4 +55,4 @@
 
 ---
 ### 💡 ציטוט טכנולוגי יומי
-> "The only way to do great work is to love what you do." - Steve Jobs
+> "First, solve the problem. Then, write the code." - John Johnson
